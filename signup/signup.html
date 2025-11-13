@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EAUTECH SIGNUP</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="container-fluid p-0 min-vh-100">
+        <div class="row no-gutters min-vh-100">
+            <!-- Left promo panel -->
+            <aside class="col-12 col-md-5 col-lg-4 d-flex flex-column justify-content-between promo-panel text-light">
+                <div class="p-4 pt-md-5">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="logo-wrap mr-3">
+                            <svg class="eautech-logo" width="72" height="72" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="EAUTECH logo">
+                                <circle cx="50" cy="50" r="50" fill="#380101"/>
+                                <g transform="translate(12,22)" fill="#fbfbfb">
+                                    <path d="M10 6c0-1 1-2 2-2h22c2 0 4 1 4 3v26c0 2-2 3-4 3H12c-1 0-2-1-2-2V6z" />
+                                    <path d="M46 6h22c1 0 2 1 2 2v26c0 1-1 2-2 2H46V6z" fill="#fbfbfb" opacity="0.98"/>
+                                    <path d="M42 8c1 0 2 1 2 2v26c0 1-1 2-2 2" fill="#e8d6d6" opacity="0.6"/>
+                                </g>
+                                <g transform="translate(22,4) scale(0.6)">
+                                    <polygon points="50,10 5,30 50,50 95,30" fill="#fbfbfb" opacity="0.12"/>
+                                    <polygon points="50,10 5,30 50,45 95,30" fill="#fbfbfb"/>
+                                    <rect x="44" y="40" width="12" height="6" rx="1.5" fill="#380101"/>
+                                    <path d="M58 34c0 1-7 2-14 2s-14-1-14-2" fill="#e8d6d6" opacity="0.5"/>
+                                </g>
+                            </svg>
+                        </div>
+
+                        <div>
+                            <h5 class="mb-0 font-weight-bold" style="color:#fbfbfb">EAUTECH</h5>
+                            <small class="text-muted" style="color: rgba(251,251,251,0.85)">Education Program</small>
+                        </div>
+                    </div>
+
+                    <h1 class="promo-title">Get notified on your class <span class="accent">schedules</span></h1>
+                    <p class="lead promo-desc">
+                        One-time notifications and class schedules to keep you on track and avoid missing classes.
+                    </p>
+                </div>
+
+                <div class="p-4 pb-md-5">
+                    <div class="carousel-dots" aria-hidden="true">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Right form panel -->
+            <main class="col-12 col-md-7 col-lg-8 d-flex align-items-center justify-content-center">
+                <div class="w-100" style="max-width:680px;">
+                    <div class="card form-card shadow-sm animated-card">
+                        <div class="card-body p-5">
+                            <div class="mb-4">
+                                <h2 class="mb-1" style="color:#380101;">Sign Up</h2>
+                                <p class="text-muted mb-0">Create your EAUTECH account to access courses and resources.</p>
+                            </div>
+
+                            <form novalidate>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input id="email" type="email" class="form-control" placeholder="you@example.com" required>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-12 col-md-6">
+                                        <label for="password">Password</label>
+                                        <input id="password" type="password" class="form-control" placeholder="Password" required>
+                                    </div>
+                                    <div class="form-group col-12 col-md-6">
+                                        <label for="confirm-password">Confirm Password</label>
+                                        <input id="confirm-password" type="password" class="form-control" placeholder="Confirm password" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group form-check">
+                                    <input id="terms" type="checkbox" class="form-check-input" required>
+                                    <label class="form-check-label" for="terms">Agree to Terms and Conditions</label>
+                                </div>
+
+                                <button type="submit" class="btn btn-block btn-eautech mb-3">Sign Up</button>
+
+                                <p class="text-center small mb-0">
+                                    Already have an account? Sign In <a href="../signin/signin.html" class="eautech-link">here</a>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+<script src="signup.js"></script>
+</html>

@@ -1,0 +1,112 @@
+
+:root {
+    --eautech-dark: #380101;
+    --eautech-light: #fbfbfb;
+    --accent: #d45b00; /* warm accent for CTA */
+}
+
+/* Layout */
+.promo-panel {
+    background: linear-gradient(180deg, var(--eautech-dark) 0%, #2e0000 100%);
+    min-height: 100vh;
+    color: var(--eautech-light);
+}
+
+/* Promo content */
+.promo-title {
+    font-size: 2.1rem;
+    line-height: 1.02;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    color: var(--eautech-light);
+}
+.promo-title .accent {
+    color: var(--accent);
+}
+.promo-desc {
+    margin-top: .8rem;
+    color: rgba(251,251,251,0.9);
+    max-width: 340px;
+}
+
+/* Logo styling and animation */
+.logo-wrap {
+    width: 72px;
+    height: 72px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.04);
+    animation: logo-pop 1400ms ease both;
+}
+.eautech-logo { display:block; transform-origin:center; }
+
+/* Form card */
+.form-card {
+    border: none;
+    border-radius: 12px;
+    background: var(--eautech-light);
+}
+.btn-eautech {
+    background: var(--accent);
+    color: var(--eautech-light);
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 12px 16px;
+    border: none;
+    transition: transform .12s ease, box-shadow .12s ease;
+}
+.btn-eautech:hover, .btn-eautech:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(212,91,0,0.12);
+}
+
+/* Links */
+.eautech-link { color: var(--eautech-dark); font-weight:600; }
+.eautech-link:hover { text-decoration: underline; color: #5c0b0b; }
+
+/* Inputs focus */
+.form-control:focus {
+    border-color: var(--eautech-dark);
+    box-shadow: 0 0 0 0.12rem rgba(56,1,1,0.08);
+}
+
+/* Carousel dots */
+.carousel-dots { display:flex; gap:.6rem; align-items:center; }
+.dot {
+    width: 6px; height:6px; background: rgba(251,251,251,0.3); border-radius:50%;
+}
+.dot.active { width:28px; height:8px; border-radius:6px; background: var(--accent); }
+
+/* Animations */
+.animated-card { animation: fadeInUp 700ms cubic-bezier(.22,.9,.38,1) both; }
+@keyframes fadeInUp {
+    from { opacity:0; transform: translateY(18px); }
+    to   { opacity:1; transform: translateY(0); }
+}
+@keyframes logo-pop {
+    0% { transform: scale(.85) translateY(6px); opacity:0; }
+    60% { transform: scale(1.06) translateY(-2px); opacity:1; }
+    100% { transform: scale(1) translateY(0); }
+}
+
+/* Subtle float for logo inside circle (SVG elements) */
+.eautech-logo { animation: float 4s ease-in-out infinite; }
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-4px) rotate(-1deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* Responsive tweaks */
+@media (max-width: 767.98px) {
+    .promo-title { font-size:1.6rem; }
+    .promo-desc { max-width: 100%; }
+    .promo-panel { padding-bottom: 1.5rem; }
+    .logo-wrap { width:64px; height:64px; }
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .promo-title { font-size:1.9rem; }
+}
+

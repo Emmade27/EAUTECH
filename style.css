@@ -1,0 +1,125 @@
+/* style.css */
+:root {
+    --maroon: #380101;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--white);
+    color: #222;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--maroon) !important;
+    font-size: 1.5rem;
+}
+
+.btn-maroon {
+    background-color: var(--maroon);
+    color: var(--white);
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-maroon:hover {
+    background-color: #5a0c0c;
+    transform: scale(1.05);
+}
+
+.hero {
+    background: linear-gradient(120deg, var(--white) 50%, var(--maroon) 50%);
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.hero-text h1 {
+    font-weight: 700;
+    color: var(--maroon);
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+}
+
+.feature-card {
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+}
+
+footer {
+    background-color: var(--maroon);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatUpDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.logo-animate {
+    animation: floatUpDown 3s ease-in-out infinite;
+}
+
+/* Auth Forms */
+.auth-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, var(--white), #f9f9f9);
+}
+
+.auth-card {
+    background: var(--white);
+    border: 1px solid #eee;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 0.9s ease;
+}
+
+.auth-card h3 {
+    color: var(--maroon);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.auth-link a {
+    color: var(--maroon);
+    text-decoration: none;
+}
+
+.auth-link a:hover {
+    text-decoration: underline;
+}

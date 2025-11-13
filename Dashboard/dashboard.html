@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EAUTECH Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light mb-4">
+    <div class="container-fluid">
+      <span class="navbar-brand fw-bold text-dark">Dashboard</span>
+      <div class="d-flex align-items-center">
+        <button class="btn btn-primary me-3">+ Add Event</button>
+
+        <!-- Profile Button in Navbar -->
+        <div class="dropdown">
+          <button class="btn btn-outline-dark dropdown-toggle" type="button" id="profileDropdown"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            👤 Profile
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#profileModal">View Profile</a>
+            </li>
+            <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item text-danger" href="#" data-section="logout">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Sidebar -->
+  <div class="sidebar d-flex flex-column p-3">
+    <div class="text-center mb-4">
+      <img src="../real logo.png" alt="EAUTECH Logo" class="logo mb-2">
+      <h4>EAUTECH</h4>
+    </div>
+    <ul class="nav flex-column">
+      <li class="nav-item"><a href="#" class="nav-link active" data-section="dashboard">📊 Dashboard</a></li>
+      <li class="nav-item"><a href="#" class="nav-link" data-section="classSchedule">📅 Class Schedule</a></li>
+      <li class="nav-item"><a href="#" class="nav-link" data-section="notifications">🔔 Notifications</a></li>
+      <li class="nav-item"><a href="#" class="nav-link" data-section="courses">📚 Courses</a></li>
+      <li class="nav-item"><a href="#" class="nav-link" data-section="profile">👤 Profile</a></li>
+      <li class="nav-item"><a href="#" class="nav-link text-danger" data-section="logout">🚪 Logout</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <nav class="navbar navbar-expand-lg navbar-light mb-4">
+      <div class="container-fluid">
+        <span class="navbar-brand fw-bold text-dark">Dashboard</span>
+        <div class="d-flex">
+          <button class="btn btn-primary">+ Add Event</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Dashboard Section -->
+    <div id="dashboard" class="section active">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card p-3">
+            <h5>Next Class</h5>
+            <p class="text-muted mb-1">Web Design Essentials</p>
+            <small class="text-secondary">Tomorrow • 10:00 AM</small>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3">
+            <h5>Notifications</h5>
+            <p class="text-muted mb-1">2 unread reminders</p>
+            <small class="text-secondary">Stay updated!</small>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3">
+            <h5>Performance</h5>
+            <p class="text-muted mb-1">Attendance: <strong>95%</strong></p>
+            <small class="text-secondary">Keep it up!</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chart Section -->
+      <div class="mt-5">
+        <h5 class="mb-3 fw-bold">Class Attendance Overview</h5>
+        <div class="card p-4">
+          <div class="mb-3">
+            <p>Web Development</p>
+            <div class="chart-bar" style="--width: 90%; width: 90%;"></div>
+          </div>
+          <div class="mb-3">
+            <p>UI/UX Design</p>
+            <div class="chart-bar" style="--width: 75%; width: 75%;"></div>
+          </div>
+          <div class="mb-3">
+            <p>Data Science</p>
+            <div class="chart-bar" style="--width: 60%; width: 60%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Class Schedule Section -->
+    <div id="classSchedule" class="section">
+      <h4 class="fw-bold mb-3">Class Schedule</h4>
+      <div class="card p-3 mb-3">
+        <h6>Web Development</h6>
+        <small>Mon • 10:00 AM - 12:00 PM</small>
+      </div>
+      <div class="card p-3 mb-3">
+        <h6>UI/UX Design</h6>
+        <small>Wed • 1:00 PM - 3:00 PM</small>
+      </div>
+      <div class="card p-3">
+        <h6>Data Science</h6>
+        <small>Fri • 2:00 PM - 4:00 PM</small>
+      </div>
+    </div>
+
+    <!-- Notifications Section -->
+    <div id="notifications" class="section">
+      <h4 class="fw-bold mb-3">Notifications</h4>
+      <div class="card p-3 mb-3">
+        <p>You have a class tomorrow at <strong>10:00 AM</strong>.</p>
+      </div>
+      <div class="card p-3 mb-3">
+        <p>Your assignment deadline is <strong>tonight</strong>.</p>
+      </div>
+      <div class="card p-3">
+        <p>New course update available: <strong>Advanced JS</strong>.</p>
+      </div>
+    </div>
+
+    <!-- Courses Section -->
+    <div id="courses" class="section">
+      <h4 class="fw-bold mb-3">Courses</h4>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="card p-3">
+            <h6>Web Development</h6>
+            <p>12 Lessons</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3">
+            <h6>UI/UX Design</h6>
+            <p>10 Lessons</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3">
+            <h6>Data Science</h6>
+            <p>8 Lessons</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Profile Section -->
+    <!-- Profile Section -->
+    <div id="profile" class="section">
+      <h4 class="fw-bold mb-3">Profile</h4>
+      <div class="card p-4">
+        <h6>Name: <span class="text-muted">John Doe</span></h6>
+        <h6>Email: <span class="text-muted">john@example.com</span></h6>
+        <h6>Enrolled Courses: <span class="text-muted">3</span></h6>
+
+        <!-- Buttons -->
+        <div class="mt-3">
+          <button class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#viewProfileModal">
+            View Profile
+          </button>
+          <button class="btn btn-outline-dark">Edit Profile</button>
+        </div>
+      </div>
+    </div>
+
+   
+
+
+    <!-- Logout Section -->
+    <div id="logout" class="section text-center">
+      <div class="card p-5">
+        <h5 class="mb-3">Are you sure you want to logout?</h5>
+        <button class="btn btn-danger me-2">Yes, Logout</button> <br>
+        <button class="btn btn-secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Section Navigation Logic
+    const links = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('.section');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        links.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        const sectionId = link.getAttribute('data-section');
+        sections.forEach(s => s.classList.remove('active'));
+        document.getElementById(sectionId).classList.add('active');
+      });
+    });
+  </script>
+  <!-- Profile Modal -->
+  <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg rounded-3">
+        <div class="modal-header" style="background-color: #380101; color: white;">
+          <h5 class="modal-title" id="profileModalLabel">My Profile</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 text-center">
+          <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="User Avatar" class="rounded-circle mb-3"
+            width="90" height="90" style="animation: float 3s ease-in-out infinite;">
+          <h6 class="fw-bold mb-0">John Doe</h6>
+          <p class="text-muted mb-2">john@example.com</p>
+          <p class="text-secondary">Student at EAUTECH</p>
+
+          <hr>
+          <div class="row text-center">
+            <div class="col">
+              <h6 class="fw-bold mb-0">3</h6>
+              <small class="text-muted">Courses</small>
+            </div>
+            <div class="col">
+              <h6 class="fw-bold mb-0">95%</h6>
+              <small class="text-muted">Attendance</small>
+            </div>
+            <div class="col">
+              <h6 class="fw-bold mb-0">4.8</h6>
+              <small class="text-muted">Rating</small>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

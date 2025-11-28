@@ -25,7 +25,7 @@ const signIn = () => {
             const user = result.user;
             console.log(user)
             if (user) setTimeout(() => {
-                window.location.href = "../dashboard.html"
+                window.location.href = "../dashboard/dashboard.html"
             }, 1000);
             else {
                 window.location.href = "index.html"
